@@ -1,0 +1,146 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "assessment_type": "OSM Infrastructure Flood & Debris Exposure",
+    "summary": {
+      "total_buildings_in_osm": 54,
+      "damaged_buildings_count": 2,
+      "high_likelihood_buildings": 0,
+      "medium_likelihood_buildings": 1,
+      "low_likelihood_buildings": 1,
+      "total_roads_km": 64.3,
+      "blocked_roads_km": 3.42,
+      "damaged_roads_segments": 1,
+      "total_bridges_in_osm": 4,
+      "bridges_at_risk_count": 1
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            85.45750000000001,
+            27.9135
+          ],
+          [
+            85.45790000000001,
+            27.9135
+          ],
+          [
+            85.45790000000001,
+            27.913899999999998
+          ],
+          [
+            85.45750000000001,
+            27.913899999999998
+          ],
+          [
+            85.45750000000001,
+            27.9135
+          ]
+        ]
+      },
+      "properties": {
+        "id": "way/bld_larcha_1",
+        "feature_type": "building",
+        "settlement": "Larcha",
+        "use": "school",
+        "hazard_type": "debris_flow",
+        "affected_fraction": 0.162,
+        "damage_likelihood": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            85.4593,
+            27.915
+          ],
+          [
+            85.4597,
+            27.915
+          ],
+          [
+            85.4597,
+            27.915399999999998
+          ],
+          [
+            85.4593,
+            27.915399999999998
+          ],
+          [
+            85.4593,
+            27.915
+          ]
+        ]
+      },
+      "properties": {
+        "id": "way/bld_larcha_2",
+        "feature_type": "building",
+        "settlement": "Larcha",
+        "use": "residential",
+        "hazard_type": "debris_flow",
+        "affected_fraction": 0.009,
+        "damage_likelihood": "low"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.421,
+            27.868
+          ],
+          [
+            85.445,
+            27.892
+          ],
+          [
+            85.462,
+            27.915
+          ]
+        ]
+      },
+      "properties": {
+        "id": "way/rd_araniko_2",
+        "feature_type": "road",
+        "name": "Araniko Highway (Jambu - Larcha)",
+        "highway": "primary",
+        "length_km": 7.4,
+        "blocked_km": 3.42,
+        "affected_fraction": 0.463,
+        "damage_likelihood": "high",
+        "hazard_type": "debris_flow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.461,
+          27.916
+        ]
+      },
+      "properties": {
+        "id": "way/bridge_larcha",
+        "feature_type": "bridge",
+        "name": "Larcha Friendship Bridge",
+        "highway": "primary",
+        "span_length_m": 68,
+        "status": "at-risk",
+        "affected_fraction": 0.012,
+        "damage_likelihood": "medium",
+        "hazard_type": "flood_scour_and_approach_damage"
+      }
+    }
+  ]
+}

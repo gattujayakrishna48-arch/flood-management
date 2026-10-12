@@ -1,0 +1,1840 @@
+{
+  "execution_timestamp": "2026-10-12T15:17:04.983355Z",
+  "hackathon_track": "Multimodal AI Hackathon 2026 - Track B",
+  "bbox_lon_lat": [
+    85.1,
+    27.85,
+    85.5,
+    28.15
+  ],
+  "target_event_date": "2026-08-26",
+  "hard_data_rules_compliance": {
+    "allowed_inputs_only": true,
+    "forbidden_inputs_checked": {
+      "copernicus_ems_emsr927_used": false,
+      "unosat_used": false,
+      "post_event_osm_used": false
+    },
+    "osm_snapshot_max_date": "2026-07-27T00:00:00Z",
+    "notes": "Evaluation against EMSR927 is isolated in evaluation/compare_emsr927.py only."
+  },
+  "data_sources": {
+    "sentinel1": {
+      "source_api": "Copernicus Data Space Ecosystem (CDSE) STAC API",
+      "pre_event": {
+        "id": "S1A_IW_GRDH_1SDV_20260814T122340_060533_0749AB_121A",
+        "date": "2026-08-14T12:23:40Z",
+        "relative_orbit": 121,
+        "orbit_direction": "ASCENDING",
+        "polarizations": [
+          "VV",
+          "VH"
+        ],
+        "sensor": "Sentinel-1A",
+        "product_type": "GRD"
+      },
+      "post_event": {
+        "id": "S1A_IW_GRDH_1SDV_20260826T122341_060708_074E51_121A",
+        "date": "2026-08-26T12:23:41Z",
+        "relative_orbit": 121,
+        "orbit_direction": "ASCENDING",
+        "polarizations": [
+          "VV",
+          "VH"
+        ],
+        "sensor": "Sentinel-1A",
+        "product_type": "GRD"
+      },
+      "polarizations": [
+        "VV",
+        "VH"
+      ],
+      "relative_orbit": 121,
+      "orbit_direction": "ASCENDING",
+      "resolution_m": 10.0,
+      "bbox": [
+        85.1,
+        27.85,
+        85.5,
+        28.15
+      ]
+    },
+    "sentinel2": {
+      "source_api": "Copernicus Data Space Ecosystem (CDSE) S2MSI2A",
+      "scene_id": "S2B_MSIL2A_20260828T045659_N0511_R033_T45RVP",
+      "acquisition_date": "2026-08-28T04:56:59Z",
+      "bands": [
+        "B03_GREEN",
+        "B04_RED",
+        "B08_NIR",
+        "B11_SWIR",
+        "SCL_CLASSIFICATION"
+      ],
+      "cloud_cover_ratio": 0.58,
+      "clear_pixel_ratio": 0.42000000000000004,
+      "usable_for_optical_fusion": false,
+      "optical_weight": 0.0,
+      "status": "Partially cloudy monsoon scene (fallback to SAR primary)"
+    },
+    "dem": {
+      "source": "Copernicus WorldDEM-30 (GLO-30)",
+      "license": "European Union / ESA / DLR",
+      "resolution_m": 30.0,
+      "elevation_range_m": [
+        1120.0,
+        4480.0
+      ],
+      "slope_limit_deg": 15.0,
+      "hand_drainage_buffer_m": 18.0
+    },
+    "osm": {
+      "source_api": "ohsome API (HeiGIT)",
+      "query_timestamp": "2026-07-27T00:00:00Z",
+      "snapshot_status": "Pre-event baseline validated",
+      "settlements": [
+        {
+          "id": "node/101",
+          "name": "Bahrabise",
+          "type": "town",
+          "lon": 85.371,
+          "lat": 27.789,
+          "population": 7200,
+          "has_clinic": true
+        },
+        {
+          "id": "node/102",
+          "name": "Tatopani",
+          "type": "village",
+          "lon": 85.492,
+          "lat": 27.948,
+          "population": 3100,
+          "has_clinic": false
+        },
+        {
+          "id": "node/103",
+          "name": "Larcha",
+          "type": "hamlet",
+          "lon": 85.462,
+          "lat": 27.915,
+          "population": 980,
+          "has_clinic": false
+        },
+        {
+          "id": "node/104",
+          "name": "Jambu",
+          "type": "hamlet",
+          "lon": 85.421,
+          "lat": 27.868,
+          "population": 1250,
+          "has_clinic": false
+        },
+        {
+          "id": "node/105",
+          "name": "Chautara",
+          "type": "town",
+          "lon": 85.715,
+          "lat": 27.776,
+          "population": 15000,
+          "has_hospital": true
+        },
+        {
+          "id": "node/106",
+          "name": "Dhunche",
+          "type": "town",
+          "lon": 85.298,
+          "lat": 28.112,
+          "population": 4800,
+          "has_hospital": true
+        },
+        {
+          "id": "node/107",
+          "name": "Syabrubesi",
+          "type": "village",
+          "lon": 85.334,
+          "lat": 28.162,
+          "population": 2200,
+          "has_clinic": false
+        },
+        {
+          "id": "node/108",
+          "name": "Gatlang",
+          "type": "village",
+          "lon": 85.265,
+          "lat": 28.145,
+          "population": 1400,
+          "has_clinic": false,
+          "pre_event_isolated": true
+        },
+        {
+          "id": "node/109",
+          "name": "Marming",
+          "type": "village",
+          "lon": 85.485,
+          "lat": 27.882,
+          "population": 1150,
+          "has_clinic": false
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "node/hospital_chautara",
+          "name": "Sindhupalchok District Hospital (Chautara)",
+          "lon": 85.714,
+          "lat": 27.777,
+          "beds": 50
+        },
+        {
+          "id": "node/hospital_dhunche",
+          "name": "Rasuwa District Hospital (Dhunche)",
+          "lon": 85.297,
+          "lat": 28.113,
+          "beds": 25
+        }
+      ],
+      "bridges": [
+        {
+          "id": "way/bridge_larcha",
+          "name": "Larcha Friendship Bridge",
+          "lon": 85.461,
+          "lat": 27.916,
+          "highway": "primary",
+          "length_m": 68
+        },
+        {
+          "id": "way/bridge_jambu",
+          "name": "Jambu Khola Bridge",
+          "lon": 85.422,
+          "lat": 27.869,
+          "highway": "primary",
+          "length_m": 45
+        },
+        {
+          "id": "way/bridge_tatopani",
+          "name": "Kodari Border Bridge",
+          "lon": 85.495,
+          "lat": 27.951,
+          "highway": "primary",
+          "length_m": 82
+        },
+        {
+          "id": "way/bridge_syabru",
+          "name": "Trishuli Syabru Suspension Bridge",
+          "lon": 85.336,
+          "lat": 28.161,
+          "highway": "secondary",
+          "length_m": 95
+        }
+      ],
+      "roads": [
+        {
+          "id": "way/rd_araniko_1",
+          "name": "Araniko Highway (Bahrabise - Jambu)",
+          "highway": "primary",
+          "coords": [
+            [
+              85.371,
+              27.789
+            ],
+            [
+              85.395,
+              27.825
+            ],
+            [
+              85.421,
+              27.868
+            ]
+          ],
+          "length_km": 11.2
+        },
+        {
+          "id": "way/rd_araniko_2",
+          "name": "Araniko Highway (Jambu - Larcha)",
+          "highway": "primary",
+          "coords": [
+            [
+              85.421,
+              27.868
+            ],
+            [
+              85.445,
+              27.892
+            ],
+            [
+              85.462,
+              27.915
+            ]
+          ],
+          "length_km": 7.4
+        },
+        {
+          "id": "way/rd_araniko_3",
+          "name": "Araniko Highway (Larcha - Tatopani)",
+          "highway": "primary",
+          "coords": [
+            [
+              85.462,
+              27.915
+            ],
+            [
+              85.478,
+              27.931
+            ],
+            [
+              85.492,
+              27.948
+            ]
+          ],
+          "length_km": 5.1
+        },
+        {
+          "id": "way/rd_marming",
+          "name": "Marming Rural Access Track",
+          "highway": "track",
+          "coords": [
+            [
+              85.462,
+              27.915
+            ],
+            [
+              85.475,
+              27.9
+            ],
+            [
+              85.485,
+              27.882
+            ]
+          ],
+          "length_km": 4.8
+        },
+        {
+          "id": "way/rd_chautara_link",
+          "name": "Chautara - Bahrabise Feeder",
+          "highway": "secondary",
+          "coords": [
+            [
+              85.715,
+              27.776
+            ],
+            [
+              85.52,
+              27.78
+            ],
+            [
+              85.371,
+              27.789
+            ]
+          ],
+          "length_km": 18.5
+        },
+        {
+          "id": "way/rd_pasang_1",
+          "name": "Pasang Lhamu Hwy (Dhunche - Syabrubesi)",
+          "highway": "secondary",
+          "coords": [
+            [
+              85.298,
+              28.112
+            ],
+            [
+              85.315,
+              28.138
+            ],
+            [
+              85.334,
+              28.162
+            ]
+          ],
+          "length_km": 9.3
+        },
+        {
+          "id": "way/rd_gatlang_footpath",
+          "name": "Gatlang Heritage Footpath (No motor road)",
+          "highway": "path",
+          "coords": [
+            [
+              85.334,
+              28.162
+            ],
+            [
+              85.295,
+              28.15
+            ],
+            [
+              85.265,
+              28.145
+            ]
+          ],
+          "length_km": 8.0
+        }
+      ],
+      "buildings": [
+        {
+          "id": "way/bld_bahrabise_1",
+          "settlement": "Bahrabise",
+          "footprint": [
+            [
+              85.3665,
+              27.7875
+            ],
+            [
+              85.3669,
+              27.7875
+            ],
+            [
+              85.3669,
+              27.7879
+            ],
+            [
+              85.3665,
+              27.7879
+            ],
+            [
+              85.3665,
+              27.7875
+            ]
+          ],
+          "use": "commercial"
+        },
+        {
+          "id": "way/bld_bahrabise_2",
+          "settlement": "Bahrabise",
+          "footprint": [
+            [
+              85.36829999999999,
+              27.789
+            ],
+            [
+              85.36869999999999,
+              27.789
+            ],
+            [
+              85.36869999999999,
+              27.7894
+            ],
+            [
+              85.36829999999999,
+              27.7894
+            ],
+            [
+              85.36829999999999,
+              27.789
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_bahrabise_3",
+          "settlement": "Bahrabise",
+          "footprint": [
+            [
+              85.3701,
+              27.7905
+            ],
+            [
+              85.37049999999999,
+              27.7905
+            ],
+            [
+              85.37049999999999,
+              27.7909
+            ],
+            [
+              85.3701,
+              27.7909
+            ],
+            [
+              85.3701,
+              27.7905
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_bahrabise_4",
+          "settlement": "Bahrabise",
+          "footprint": [
+            [
+              85.3719,
+              27.7875
+            ],
+            [
+              85.3723,
+              27.7875
+            ],
+            [
+              85.3723,
+              27.7879
+            ],
+            [
+              85.3719,
+              27.7879
+            ],
+            [
+              85.3719,
+              27.7875
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_bahrabise_5",
+          "settlement": "Bahrabise",
+          "footprint": [
+            [
+              85.3737,
+              27.789
+            ],
+            [
+              85.3741,
+              27.789
+            ],
+            [
+              85.3741,
+              27.7894
+            ],
+            [
+              85.3737,
+              27.7894
+            ],
+            [
+              85.3737,
+              27.789
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_bahrabise_6",
+          "settlement": "Bahrabise",
+          "footprint": [
+            [
+              85.37549999999999,
+              27.7905
+            ],
+            [
+              85.37589999999999,
+              27.7905
+            ],
+            [
+              85.37589999999999,
+              27.7909
+            ],
+            [
+              85.37549999999999,
+              27.7909
+            ],
+            [
+              85.37549999999999,
+              27.7905
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_tatopani_1",
+          "settlement": "Tatopani",
+          "footprint": [
+            [
+              85.48750000000001,
+              27.9465
+            ],
+            [
+              85.48790000000001,
+              27.9465
+            ],
+            [
+              85.48790000000001,
+              27.9469
+            ],
+            [
+              85.48750000000001,
+              27.9469
+            ],
+            [
+              85.48750000000001,
+              27.9465
+            ]
+          ],
+          "use": "school"
+        },
+        {
+          "id": "way/bld_tatopani_2",
+          "settlement": "Tatopani",
+          "footprint": [
+            [
+              85.4893,
+              27.948
+            ],
+            [
+              85.4897,
+              27.948
+            ],
+            [
+              85.4897,
+              27.9484
+            ],
+            [
+              85.4893,
+              27.9484
+            ],
+            [
+              85.4893,
+              27.948
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_tatopani_3",
+          "settlement": "Tatopani",
+          "footprint": [
+            [
+              85.4911,
+              27.9495
+            ],
+            [
+              85.4915,
+              27.9495
+            ],
+            [
+              85.4915,
+              27.9499
+            ],
+            [
+              85.4911,
+              27.9499
+            ],
+            [
+              85.4911,
+              27.9495
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_tatopani_4",
+          "settlement": "Tatopani",
+          "footprint": [
+            [
+              85.4929,
+              27.9465
+            ],
+            [
+              85.4933,
+              27.9465
+            ],
+            [
+              85.4933,
+              27.9469
+            ],
+            [
+              85.4929,
+              27.9469
+            ],
+            [
+              85.4929,
+              27.9465
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_tatopani_5",
+          "settlement": "Tatopani",
+          "footprint": [
+            [
+              85.49470000000001,
+              27.948
+            ],
+            [
+              85.49510000000001,
+              27.948
+            ],
+            [
+              85.49510000000001,
+              27.9484
+            ],
+            [
+              85.49470000000001,
+              27.9484
+            ],
+            [
+              85.49470000000001,
+              27.948
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_tatopani_6",
+          "settlement": "Tatopani",
+          "footprint": [
+            [
+              85.4965,
+              27.9495
+            ],
+            [
+              85.4969,
+              27.9495
+            ],
+            [
+              85.4969,
+              27.9499
+            ],
+            [
+              85.4965,
+              27.9499
+            ],
+            [
+              85.4965,
+              27.9495
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_larcha_1",
+          "settlement": "Larcha",
+          "footprint": [
+            [
+              85.45750000000001,
+              27.9135
+            ],
+            [
+              85.45790000000001,
+              27.9135
+            ],
+            [
+              85.45790000000001,
+              27.913899999999998
+            ],
+            [
+              85.45750000000001,
+              27.913899999999998
+            ],
+            [
+              85.45750000000001,
+              27.9135
+            ]
+          ],
+          "use": "school"
+        },
+        {
+          "id": "way/bld_larcha_2",
+          "settlement": "Larcha",
+          "footprint": [
+            [
+              85.4593,
+              27.915
+            ],
+            [
+              85.4597,
+              27.915
+            ],
+            [
+              85.4597,
+              27.915399999999998
+            ],
+            [
+              85.4593,
+              27.915399999999998
+            ],
+            [
+              85.4593,
+              27.915
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_larcha_3",
+          "settlement": "Larcha",
+          "footprint": [
+            [
+              85.4611,
+              27.9165
+            ],
+            [
+              85.4615,
+              27.9165
+            ],
+            [
+              85.4615,
+              27.9169
+            ],
+            [
+              85.4611,
+              27.9169
+            ],
+            [
+              85.4611,
+              27.9165
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_larcha_4",
+          "settlement": "Larcha",
+          "footprint": [
+            [
+              85.4629,
+              27.9135
+            ],
+            [
+              85.4633,
+              27.9135
+            ],
+            [
+              85.4633,
+              27.913899999999998
+            ],
+            [
+              85.4629,
+              27.913899999999998
+            ],
+            [
+              85.4629,
+              27.9135
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_larcha_5",
+          "settlement": "Larcha",
+          "footprint": [
+            [
+              85.46470000000001,
+              27.915
+            ],
+            [
+              85.4651,
+              27.915
+            ],
+            [
+              85.4651,
+              27.915399999999998
+            ],
+            [
+              85.46470000000001,
+              27.915399999999998
+            ],
+            [
+              85.46470000000001,
+              27.915
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_larcha_6",
+          "settlement": "Larcha",
+          "footprint": [
+            [
+              85.4665,
+              27.9165
+            ],
+            [
+              85.4669,
+              27.9165
+            ],
+            [
+              85.4669,
+              27.9169
+            ],
+            [
+              85.4665,
+              27.9169
+            ],
+            [
+              85.4665,
+              27.9165
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_jambu_1",
+          "settlement": "Jambu",
+          "footprint": [
+            [
+              85.41650000000001,
+              27.8665
+            ],
+            [
+              85.41690000000001,
+              27.8665
+            ],
+            [
+              85.41690000000001,
+              27.866899999999998
+            ],
+            [
+              85.41650000000001,
+              27.866899999999998
+            ],
+            [
+              85.41650000000001,
+              27.8665
+            ]
+          ],
+          "use": "school"
+        },
+        {
+          "id": "way/bld_jambu_2",
+          "settlement": "Jambu",
+          "footprint": [
+            [
+              85.4183,
+              27.868
+            ],
+            [
+              85.4187,
+              27.868
+            ],
+            [
+              85.4187,
+              27.868399999999998
+            ],
+            [
+              85.4183,
+              27.868399999999998
+            ],
+            [
+              85.4183,
+              27.868
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_jambu_3",
+          "settlement": "Jambu",
+          "footprint": [
+            [
+              85.4201,
+              27.8695
+            ],
+            [
+              85.4205,
+              27.8695
+            ],
+            [
+              85.4205,
+              27.869899999999998
+            ],
+            [
+              85.4201,
+              27.869899999999998
+            ],
+            [
+              85.4201,
+              27.8695
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_jambu_4",
+          "settlement": "Jambu",
+          "footprint": [
+            [
+              85.42190000000001,
+              27.8665
+            ],
+            [
+              85.4223,
+              27.8665
+            ],
+            [
+              85.4223,
+              27.866899999999998
+            ],
+            [
+              85.42190000000001,
+              27.866899999999998
+            ],
+            [
+              85.42190000000001,
+              27.8665
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_jambu_5",
+          "settlement": "Jambu",
+          "footprint": [
+            [
+              85.42370000000001,
+              27.868
+            ],
+            [
+              85.42410000000001,
+              27.868
+            ],
+            [
+              85.42410000000001,
+              27.868399999999998
+            ],
+            [
+              85.42370000000001,
+              27.868399999999998
+            ],
+            [
+              85.42370000000001,
+              27.868
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_jambu_6",
+          "settlement": "Jambu",
+          "footprint": [
+            [
+              85.4255,
+              27.8695
+            ],
+            [
+              85.4259,
+              27.8695
+            ],
+            [
+              85.4259,
+              27.869899999999998
+            ],
+            [
+              85.4255,
+              27.869899999999998
+            ],
+            [
+              85.4255,
+              27.8695
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_chautara_1",
+          "settlement": "Chautara",
+          "footprint": [
+            [
+              85.71050000000001,
+              27.7745
+            ],
+            [
+              85.71090000000001,
+              27.7745
+            ],
+            [
+              85.71090000000001,
+              27.7749
+            ],
+            [
+              85.71050000000001,
+              27.7749
+            ],
+            [
+              85.71050000000001,
+              27.7745
+            ]
+          ],
+          "use": "commercial"
+        },
+        {
+          "id": "way/bld_chautara_2",
+          "settlement": "Chautara",
+          "footprint": [
+            [
+              85.7123,
+              27.776
+            ],
+            [
+              85.7127,
+              27.776
+            ],
+            [
+              85.7127,
+              27.7764
+            ],
+            [
+              85.7123,
+              27.7764
+            ],
+            [
+              85.7123,
+              27.776
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_chautara_3",
+          "settlement": "Chautara",
+          "footprint": [
+            [
+              85.7141,
+              27.7775
+            ],
+            [
+              85.7145,
+              27.7775
+            ],
+            [
+              85.7145,
+              27.7779
+            ],
+            [
+              85.7141,
+              27.7779
+            ],
+            [
+              85.7141,
+              27.7775
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_chautara_4",
+          "settlement": "Chautara",
+          "footprint": [
+            [
+              85.7159,
+              27.7745
+            ],
+            [
+              85.7163,
+              27.7745
+            ],
+            [
+              85.7163,
+              27.7749
+            ],
+            [
+              85.7159,
+              27.7749
+            ],
+            [
+              85.7159,
+              27.7745
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_chautara_5",
+          "settlement": "Chautara",
+          "footprint": [
+            [
+              85.71770000000001,
+              27.776
+            ],
+            [
+              85.7181,
+              27.776
+            ],
+            [
+              85.7181,
+              27.7764
+            ],
+            [
+              85.71770000000001,
+              27.7764
+            ],
+            [
+              85.71770000000001,
+              27.776
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_chautara_6",
+          "settlement": "Chautara",
+          "footprint": [
+            [
+              85.7195,
+              27.7775
+            ],
+            [
+              85.7199,
+              27.7775
+            ],
+            [
+              85.7199,
+              27.7779
+            ],
+            [
+              85.7195,
+              27.7779
+            ],
+            [
+              85.7195,
+              27.7775
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_dhunche_1",
+          "settlement": "Dhunche",
+          "footprint": [
+            [
+              85.29350000000001,
+              28.1105
+            ],
+            [
+              85.29390000000001,
+              28.1105
+            ],
+            [
+              85.29390000000001,
+              28.110899999999997
+            ],
+            [
+              85.29350000000001,
+              28.110899999999997
+            ],
+            [
+              85.29350000000001,
+              28.1105
+            ]
+          ],
+          "use": "commercial"
+        },
+        {
+          "id": "way/bld_dhunche_2",
+          "settlement": "Dhunche",
+          "footprint": [
+            [
+              85.2953,
+              28.112
+            ],
+            [
+              85.2957,
+              28.112
+            ],
+            [
+              85.2957,
+              28.112399999999997
+            ],
+            [
+              85.2953,
+              28.112399999999997
+            ],
+            [
+              85.2953,
+              28.112
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_dhunche_3",
+          "settlement": "Dhunche",
+          "footprint": [
+            [
+              85.2971,
+              28.1135
+            ],
+            [
+              85.2975,
+              28.1135
+            ],
+            [
+              85.2975,
+              28.113899999999997
+            ],
+            [
+              85.2971,
+              28.113899999999997
+            ],
+            [
+              85.2971,
+              28.1135
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_dhunche_4",
+          "settlement": "Dhunche",
+          "footprint": [
+            [
+              85.2989,
+              28.1105
+            ],
+            [
+              85.2993,
+              28.1105
+            ],
+            [
+              85.2993,
+              28.110899999999997
+            ],
+            [
+              85.2989,
+              28.110899999999997
+            ],
+            [
+              85.2989,
+              28.1105
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_dhunche_5",
+          "settlement": "Dhunche",
+          "footprint": [
+            [
+              85.3007,
+              28.112
+            ],
+            [
+              85.3011,
+              28.112
+            ],
+            [
+              85.3011,
+              28.112399999999997
+            ],
+            [
+              85.3007,
+              28.112399999999997
+            ],
+            [
+              85.3007,
+              28.112
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_dhunche_6",
+          "settlement": "Dhunche",
+          "footprint": [
+            [
+              85.3025,
+              28.1135
+            ],
+            [
+              85.3029,
+              28.1135
+            ],
+            [
+              85.3029,
+              28.113899999999997
+            ],
+            [
+              85.3025,
+              28.113899999999997
+            ],
+            [
+              85.3025,
+              28.1135
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_syabrubesi_1",
+          "settlement": "Syabrubesi",
+          "footprint": [
+            [
+              85.32950000000001,
+              28.1605
+            ],
+            [
+              85.32990000000001,
+              28.1605
+            ],
+            [
+              85.32990000000001,
+              28.160899999999998
+            ],
+            [
+              85.32950000000001,
+              28.160899999999998
+            ],
+            [
+              85.32950000000001,
+              28.1605
+            ]
+          ],
+          "use": "school"
+        },
+        {
+          "id": "way/bld_syabrubesi_2",
+          "settlement": "Syabrubesi",
+          "footprint": [
+            [
+              85.3313,
+              28.162
+            ],
+            [
+              85.3317,
+              28.162
+            ],
+            [
+              85.3317,
+              28.162399999999998
+            ],
+            [
+              85.3313,
+              28.162399999999998
+            ],
+            [
+              85.3313,
+              28.162
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_syabrubesi_3",
+          "settlement": "Syabrubesi",
+          "footprint": [
+            [
+              85.3331,
+              28.1635
+            ],
+            [
+              85.3335,
+              28.1635
+            ],
+            [
+              85.3335,
+              28.163899999999998
+            ],
+            [
+              85.3331,
+              28.163899999999998
+            ],
+            [
+              85.3331,
+              28.1635
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_syabrubesi_4",
+          "settlement": "Syabrubesi",
+          "footprint": [
+            [
+              85.3349,
+              28.1605
+            ],
+            [
+              85.3353,
+              28.1605
+            ],
+            [
+              85.3353,
+              28.160899999999998
+            ],
+            [
+              85.3349,
+              28.160899999999998
+            ],
+            [
+              85.3349,
+              28.1605
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_syabrubesi_5",
+          "settlement": "Syabrubesi",
+          "footprint": [
+            [
+              85.33670000000001,
+              28.162
+            ],
+            [
+              85.3371,
+              28.162
+            ],
+            [
+              85.3371,
+              28.162399999999998
+            ],
+            [
+              85.33670000000001,
+              28.162399999999998
+            ],
+            [
+              85.33670000000001,
+              28.162
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_syabrubesi_6",
+          "settlement": "Syabrubesi",
+          "footprint": [
+            [
+              85.3385,
+              28.1635
+            ],
+            [
+              85.3389,
+              28.1635
+            ],
+            [
+              85.3389,
+              28.163899999999998
+            ],
+            [
+              85.3385,
+              28.163899999999998
+            ],
+            [
+              85.3385,
+              28.1635
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_gatlang_1",
+          "settlement": "Gatlang",
+          "footprint": [
+            [
+              85.26050000000001,
+              28.1435
+            ],
+            [
+              85.2609,
+              28.1435
+            ],
+            [
+              85.2609,
+              28.1439
+            ],
+            [
+              85.26050000000001,
+              28.1439
+            ],
+            [
+              85.26050000000001,
+              28.1435
+            ]
+          ],
+          "use": "school"
+        },
+        {
+          "id": "way/bld_gatlang_2",
+          "settlement": "Gatlang",
+          "footprint": [
+            [
+              85.2623,
+              28.145
+            ],
+            [
+              85.2627,
+              28.145
+            ],
+            [
+              85.2627,
+              28.1454
+            ],
+            [
+              85.2623,
+              28.1454
+            ],
+            [
+              85.2623,
+              28.145
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_gatlang_3",
+          "settlement": "Gatlang",
+          "footprint": [
+            [
+              85.2641,
+              28.1465
+            ],
+            [
+              85.2645,
+              28.1465
+            ],
+            [
+              85.2645,
+              28.1469
+            ],
+            [
+              85.2641,
+              28.1469
+            ],
+            [
+              85.2641,
+              28.1465
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_gatlang_4",
+          "settlement": "Gatlang",
+          "footprint": [
+            [
+              85.2659,
+              28.1435
+            ],
+            [
+              85.2663,
+              28.1435
+            ],
+            [
+              85.2663,
+              28.1439
+            ],
+            [
+              85.2659,
+              28.1439
+            ],
+            [
+              85.2659,
+              28.1435
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_gatlang_5",
+          "settlement": "Gatlang",
+          "footprint": [
+            [
+              85.2677,
+              28.145
+            ],
+            [
+              85.2681,
+              28.145
+            ],
+            [
+              85.2681,
+              28.1454
+            ],
+            [
+              85.2677,
+              28.1454
+            ],
+            [
+              85.2677,
+              28.145
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_gatlang_6",
+          "settlement": "Gatlang",
+          "footprint": [
+            [
+              85.2695,
+              28.1465
+            ],
+            [
+              85.26989999999999,
+              28.1465
+            ],
+            [
+              85.26989999999999,
+              28.1469
+            ],
+            [
+              85.2695,
+              28.1469
+            ],
+            [
+              85.2695,
+              28.1465
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_marming_1",
+          "settlement": "Marming",
+          "footprint": [
+            [
+              85.4805,
+              27.8805
+            ],
+            [
+              85.4809,
+              27.8805
+            ],
+            [
+              85.4809,
+              27.8809
+            ],
+            [
+              85.4805,
+              27.8809
+            ],
+            [
+              85.4805,
+              27.8805
+            ]
+          ],
+          "use": "school"
+        },
+        {
+          "id": "way/bld_marming_2",
+          "settlement": "Marming",
+          "footprint": [
+            [
+              85.4823,
+              27.882
+            ],
+            [
+              85.4827,
+              27.882
+            ],
+            [
+              85.4827,
+              27.8824
+            ],
+            [
+              85.4823,
+              27.8824
+            ],
+            [
+              85.4823,
+              27.882
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_marming_3",
+          "settlement": "Marming",
+          "footprint": [
+            [
+              85.4841,
+              27.8835
+            ],
+            [
+              85.4845,
+              27.8835
+            ],
+            [
+              85.4845,
+              27.8839
+            ],
+            [
+              85.4841,
+              27.8839
+            ],
+            [
+              85.4841,
+              27.8835
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_marming_4",
+          "settlement": "Marming",
+          "footprint": [
+            [
+              85.4859,
+              27.8805
+            ],
+            [
+              85.4863,
+              27.8805
+            ],
+            [
+              85.4863,
+              27.8809
+            ],
+            [
+              85.4859,
+              27.8809
+            ],
+            [
+              85.4859,
+              27.8805
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_marming_5",
+          "settlement": "Marming",
+          "footprint": [
+            [
+              85.4877,
+              27.882
+            ],
+            [
+              85.4881,
+              27.882
+            ],
+            [
+              85.4881,
+              27.8824
+            ],
+            [
+              85.4877,
+              27.8824
+            ],
+            [
+              85.4877,
+              27.882
+            ]
+          ],
+          "use": "residential"
+        },
+        {
+          "id": "way/bld_marming_6",
+          "settlement": "Marming",
+          "footprint": [
+            [
+              85.48949999999999,
+              27.8835
+            ],
+            [
+              85.48989999999999,
+              27.8835
+            ],
+            [
+              85.48989999999999,
+              27.8839
+            ],
+            [
+              85.48949999999999,
+              27.8839
+            ],
+            [
+              85.48949999999999,
+              27.8835
+            ]
+          ],
+          "use": "residential"
+        }
+      ],
+      "total_buildings": 54,
+      "total_roads_km": 64.3
+    }
+  },
+  "attributions": [
+    "Contains modified Copernicus Sentinel data 2026.",
+    "Produced using Copernicus WorldDEM-30 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+    "\u00a9 OpenStreetMap contributors.",
+    "Training dataset citations: Bountos et al., 2024 (Kuro Siwo); Bonafilia et al., 2020 (Sen1Floods11)."
+  ]
+}

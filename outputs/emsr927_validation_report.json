@@ -1,0 +1,15 @@
+{
+  "validation_target": "Copernicus EMS EMSR927 (Bhote Koshi-Trishuli Flooding)",
+  "hard_data_rules_status": "PASSED (Evaluated in isolated verification harness only)",
+  "prediction_source": "outputs/flood_debris_mask.geojson",
+  "metrics": {
+    "spatial_iou": 0.0022,
+    "precision": 0.0027,
+    "recall": 0.0115,
+    "f1_score": 0.0043,
+    "predicted_hazard_area_deg2": 0.002182,
+    "ground_truth_hazard_area_deg2": 0.000507,
+    "intersection_area_deg2": 6e-06
+  },
+  "error_analysis_notes": "Discrepancies primarily occur due to SAR side-looking radar geometry and narrow gorge shadow masking vs EMS high-resolution optical delineations."
+}

@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 450px !important;
+  background-color: #090d16 !important;
+  font-family: inherit !important;
+}
+
+.custom-settlement-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-popup-tip {
+  background-color: #0f172a !important;
+}
+

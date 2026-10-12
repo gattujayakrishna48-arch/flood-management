@@ -1,0 +1,6 @@
+{
+  "name": "SatFlood-AI: Satellite Flood & Debris Damage Assessment",
+  "description": "Satellite-based flood and debris damage assessment prototype for Multimodal AI Hackathon 2026 Track B. Change detection, OSM damage assessment, cut-off connectivity routing, and situation reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

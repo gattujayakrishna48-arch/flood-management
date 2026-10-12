@@ -1,0 +1,80 @@
+{
+  "project_name": "SatFlood-AI: Multimodal AI Hackathon 2026 Track B",
+  "version": "1.0.0",
+  "default_demo": {
+    "region_name": "Bhote Koshi-Trishuli corridor, Nepal",
+    "bbox": [85.10, 27.85, 85.50, 28.15],
+    "flood_date": "2026-08-26",
+    "country": "Nepal",
+    "crs": "EPSG:4326"
+  },
+  "data_rules": {
+    "max_osm_date": "2026-07-27T00:00:00Z",
+    "forbidden_inputs": ["EMSR927", "UNOSAT", "OSM_POST_EVENT"],
+    "allowed_inputs": ["Sentinel-1", "Sentinel-2", "Copernicus_DEM_30m", "ohsome_OSM_pre_event", "Kuro_Siwo"]
+  },
+  "sensors": {
+    "sentinel1": {
+      "stac_url": "https://catalogue.dataspace.copernicus.eu/stac",
+      "collection": "SENTINEL-1",
+      "product_type": "GRD",
+      "polarizations": ["VV", "VH"],
+      "orbit_interval_days": 12,
+      "max_temporal_window_days": 18,
+      "strict_same_orbit": true
+    },
+    "sentinel2": {
+      "stac_url": "https://catalogue.dataspace.copernicus.eu/stac",
+      "collection": "SENTINEL-2",
+      "product_type": "S2MSI2A",
+      "cloud_cover_max": 30.0,
+      "clear_pixel_threshold": 0.70
+    },
+    "dem": {
+      "source": "Copernicus WorldDEM-30",
+      "resolution_m": 30
+    },
+    "osm": {
+      "ohsome_api_url": "https://api.ohsome.org/v1",
+      "snapshot_date": "2026-07-27"
+    }
+  },
+  "mapping_parameters": {
+    "sar_filter": "lee_sigma",
+    "sar_filter_size": 5,
+    "water_log_ratio_threshold_db": -2.2,
+    "debris_log_ratio_threshold_db": 2.8,
+    "max_flood_slope_deg": 15.0,
+    "max_hand_elevation_m": 18.0,
+    "wet_snow_elevation_m": 3800.0,
+    "optical_mndwi_threshold": 0.15,
+    "optical_ndvi_vegetation_drop": 0.25
+  },
+  "damage_parameters": {
+    "buffer_buildings_m": 10.0,
+    "buffer_roads_m": 12.0,
+    "buffer_bridges_m": 25.0,
+    "likelihood_thresholds": {
+      "low": 0.10,
+      "medium": 0.35,
+      "high": 0.65
+    }
+  },
+  "network_parameters": {
+    "road_speeds_kmh": {
+      "motorway": 70,
+      "trunk": 60,
+      "primary": 50,
+      "secondary": 40,
+      "tertiary": 30,
+      "residential": 20,
+      "unclassified": 20,
+      "track": 15,
+      "path": 5
+    },
+    "destination_tags": {
+      "towns": ["town", "city", "village"],
+      "medical": ["hospital", "clinic"]
+    }
+  }
+}

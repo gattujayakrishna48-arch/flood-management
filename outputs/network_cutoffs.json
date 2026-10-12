@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "newly_cut_off": 3,
+    "rerouted": 0,
+    "never_road_connected_before": 1,
+    "unaffected": 5
+  },
+  "settlements": [
+    {
+      "settlement_name": "Bahrabise",
+      "population": 7200,
+      "lon": 85.371,
+      "lat": 27.789,
+      "status": "unaffected",
+      "status_code": "UNAFFECTED",
+      "pre_distance_km": 33.9,
+      "post_distance_km": 33.9,
+      "added_distance_km": 0.0,
+      "added_time_minutes": 0,
+      "destination_facility": "Sindhupalchok District Hospital (Chautara)"
+    },
+    {
+      "settlement_name": "Tatopani",
+      "population": 3100,
+      "lon": 85.492,
+      "lat": 27.948,
+      "status": "newly cut off",
+      "status_code": "NEWLY_CUT_OFF",
+      "pre_distance_km": 55.3,
+      "post_distance_km": null,
+      "added_distance_km": null,
+      "added_time_minutes": null,
+      "destination_facility": "Sindhupalchok District Hospital (Chautara)"
+    },
+    {
+      "settlement_name": "Larcha",
+      "population": 980,
+      "lon": 85.462,
+      "lat": 27.915,
+      "status": "newly cut off",
+      "status_code": "NEWLY_CUT_OFF",
+      "pre_distance_km": 50.6,
+      "post_distance_km": null,
+      "added_distance_km": null,
+      "added_time_minutes": null,
+      "destination_facility": "Sindhupalchok District Hospital (Chautara)"
+    },
+    {
+      "settlement_name": "Jambu",
+      "population": 1250,
+      "lon": 85.421,
+      "lat": 27.868,
+      "status": "unaffected",
+      "status_code": "UNAFFECTED",
+      "pre_distance_km": 44.0,
+      "post_distance_km": 44.0,
+      "added_distance_km": 0.0,
+      "added_time_minutes": 0,
+      "destination_facility": "Sindhupalchok District Hospital (Chautara)"
+    },
+    {
+      "settlement_name": "Chautara",
+      "population": 15000,
+      "lon": 85.715,
+      "lat": 27.776,
+      "status": "unaffected",
+      "status_code": "UNAFFECTED",
+      "pre_distance_km": 0,
+      "post_distance_km": 0,
+      "added_distance_km": 0.0,
+      "added_time_minutes": 0,
+      "destination_facility": "Sindhupalchok District Hospital (Chautara)"
+    },
+    {
+      "settlement_name": "Dhunche",
+      "population": 4800,
+      "lon": 85.298,
+      "lat": 28.112,
+      "status": "unaffected",
+      "status_code": "UNAFFECTED",
+      "pre_distance_km": 0,
+      "post_distance_km": 0,
+      "added_distance_km": 0.0,
+      "added_time_minutes": 0,
+      "destination_facility": "Rasuwa District Hospital (Dhunche)"
+    },
+    {
+      "settlement_name": "Syabrubesi",
+      "population": 2200,
+      "lon": 85.334,
+      "lat": 28.162,
+      "status": "unaffected",
+      "status_code": "UNAFFECTED",
+      "pre_distance_km": 6.6,
+      "post_distance_km": 6.6,
+      "added_distance_km": 0.0,
+      "added_time_minutes": 0,
+      "destination_facility": "Rasuwa District Hospital (Dhunche)"
+    },
+    {
+      "settlement_name": "Gatlang",
+      "population": 1400,
+      "lon": 85.265,
+      "lat": 28.145,
+      "status": "never road-connected before the event",
+      "status_code": "NEVER_CONNECTED",
+      "pre_distance_km": null,
+      "post_distance_km": null,
+      "added_distance_km": null,
+      "added_time_minutes": null,
+      "nearest_destination": "None (Footpath only pre-event)",
+      "hospital_name": "None reachable by road",
+      "notes": "Himalayan village relying exclusively on pedestrian trail/porter footpath prior to flood."
+    },
+    {
+      "settlement_name": "Marming",
+      "population": 1150,
+      "lon": 85.485,
+      "lat": 27.882,
+      "status": "newly cut off",
+      "status_code": "NEWLY_CUT_OFF",
+      "pre_distance_km": 54.9,
+      "post_distance_km": null,
+      "added_distance_km": null,
+      "added_time_minutes": null,
+      "destination_facility": "Sindhupalchok District Hospital (Chautara)"
+    }
+  ],
+  "total_settlements": 9,
+  "isolated_population": 6630
+}

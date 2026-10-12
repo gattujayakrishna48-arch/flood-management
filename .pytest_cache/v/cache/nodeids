@@ -1,0 +1,10 @@
+[
+  "tests/test_damage.py::test_bridge_at_risk_detection",
+  "tests/test_damage.py::test_building_damage_intersection",
+  "tests/test_data_acquisition.py::test_mismatched_orbits_rejected",
+  "tests/test_data_acquisition.py::test_same_orbit_selection_success",
+  "tests/test_mapping.py::test_himalayan_mountain_masking",
+  "tests/test_mapping.py::test_otsu_threshold_bimodal",
+  "tests/test_mapping.py::test_sar_lee_filter_noise_reduction",
+  "tests/test_network.py::test_three_way_cutoff_categorization"
+]
